@@ -65,3 +65,10 @@ li a{
 	margin-top: 80px;
 	
 }
+.ziekmelden table{
+	margin-left:25%;
+	margin-right:0%;
+}
+.ziekmelden input[type=submit]{
+	margin-top:10px;
+}

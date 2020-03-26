@@ -31,7 +31,7 @@ $stm=$con->prepare($query);
 if($stm->execute()){
 	$result=$stm->fetchAll(PDO::FETCH_OBJ);
 	echo '<div class="overzicht"><table width="50%">';
-	echo '<th>Leerlingnummer</th><th>Achternaam</th><th>Voornaam</th><th>Geboortedatum</th><th>Gezondheid</th><th>Ziek van</th><th>Ziek tot</th>';
+	echo '<th>Leerlingnummer</th><th>Achternaam</th><th>Voornaam</th><th>Geboortedatum</th><th>Gezondheid</th><th>Afwezig van</th><th>Afwezig tot</th>';
 	foreach($result as $lln){
 		echo '<tr><td>'.$lln->llnId.'</td><td>'.$lln->llnAchternaam.'</td><td>'.$lln->llnVoornaam.'</td><td>'.date("d-m-Y", strtotime($lln->geboortedatum)).'</td><td>'.$lln->gezondheid.'</td><td>'.$lln->ziekVan.'</td><td>'.$lln->ziekTot.'</td></tr>' ; 
 	}
